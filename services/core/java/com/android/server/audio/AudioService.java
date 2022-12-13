@@ -1156,13 +1156,6 @@ public class AudioService extends IAudioService.Stub
             }
         }
 
-        int maxRingNotificationVolume =
-                SystemProperties.getInt("ro.config.ring_notification_vol_steps", -1);
-        if (maxRingNotificationVolume != -1) {
-            MAX_STREAM_VOLUME[AudioSystem.STREAM_RING] = maxRingNotificationVolume;
-            MAX_STREAM_VOLUME[AudioSystem.STREAM_NOTIFICATION] = maxRingNotificationVolume;
-        }
-
         if (looper == null) {
             createAudioSystemThread();
         } else {

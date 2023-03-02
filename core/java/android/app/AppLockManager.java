@@ -30,7 +30,6 @@ import java.util.List;
 /**
  * @hide
  */
-@SystemApi
 @SystemService(Context.APP_LOCK_SERVICE)
 public final class AppLockManager {
 
